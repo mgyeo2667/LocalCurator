@@ -1,0 +1,1789 @@
+<!doctype html>
+<html lang="ko" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AX PM | 지역 제조기업 AI 대전환 파트너</title>
+    <meta name="description" content="전통 제조업의 기술 장벽을 허물고 AI 솔루션 도입과 정부 R&D 연계로 지역 공장의 확실한 성장을 이끄는 지역 정주형 AI 대전환(AX) 전략 PM 랜딩페이지" />
+    <meta property="og:title" content="AX PM | 지역 제조기업 AI 대전환 파트너" />
+    <meta property="og:description" content="전통 제조업의 기술 장벽을 허물고 AI 솔루션 도입과 정부 R&D 연계로 지역 공장의 확실한 성장을 이끄는 지역 정주형 AI 대전환(AX) 전략 PM 랜딩페이지" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Web Fonts: Plus Jakarta Sans & Noto Sans KR -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', '"Noto Sans KR"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace']
+            },
+            colors: {
+              canvas: '#f5f4f0',
+              canvasDark: '#f0eee9',
+              darkBg: '#111111',
+              darkSurface: '#161616'
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background-color: #f5f4f0;
+        color: #141414;
+      }
+      /* Custom subtle scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f5f4f0;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d4d2cc;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #a8a69e;
+      }
+      .text-balance {
+        text-wrap: balance;
+      }
+    </style>
+  </head>
+  <body class="bg-[#f5f4f0] text-[#141414] antialiased selection:bg-neutral-950 selection:text-white">
+
+    <!-- 0. Toast Notification -->
+    <div id="toastNotification" class="fixed bottom-6 right-6 z-50 hidden bg-[#111111] text-white px-5 py-3.5 border border-neutral-700 shadow-2xl flex items-center gap-3 transition-all duration-300">
+      <svg class="w-5 h-5 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <span id="toastMessage" class="text-xs font-semibold">신청이 접수되었습니다!</span>
+      <button onclick="hideToast()" class="p-1 text-neutral-400 hover:text-white">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- 1. Header & Top Announcement Ribbon (Faithful to GAZU Top Bar) -->
+    <header class="sticky top-0 z-40 w-full bg-[#f5f4f0]/95 backdrop-blur-md border-b border-neutral-300/60 transition-all">
+      <!-- Top Announcement Ribbon -->
+      <div class="bg-[#0f0f0f] text-neutral-300 px-4 md:px-8 py-2 text-[11px] md:text-xs tracking-wider flex items-center justify-between">
+        <div class="flex items-center gap-2 overflow-hidden truncate">
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+          <span class="font-medium text-neutral-200">
+            [2026 공고] 지역 중소 제조기업 1:1 무료 AX 잠재력 진단 및 퀵윈(Quick-Win) 솔루션 신청 접수 중
+          </span>
+        </div>
+        <div class="hidden sm:flex items-center gap-4 text-neutral-400 shrink-0 text-[11px]">
+          <a href="#diagnostic" class="hover:text-neutral-200 transition-colors">정부 R&D 국비 매칭</a>
+          <span class="text-neutral-600">|</span>
+          <button onclick="openConsultModal('유선 문의')" class="hover:text-neutral-200 transition-colors flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            직통 상담 문의
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Navigation Bar (3-Zone Contract) -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-6 py-3">
+        <!-- Zone 1: Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-xs font-semibold tracking-wider text-neutral-700 uppercase">
+          <a href="#solutions" class="hover:text-neutral-950 transition-colors tracking-widest relative group py-2">
+            핵심 솔루션
+            <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-neutral-950 transition-all duration-200 group-hover:w-full"></span>
+          </a>
+          <a href="#pain-points" class="hover:text-neutral-950 transition-colors tracking-widest relative group py-2">
+            현장 애로 진단
+            <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-neutral-950 transition-all duration-200 group-hover:w-full"></span>
+          </a>
+          <a href="#revenue" class="hover:text-neutral-950 transition-colors tracking-widest relative group py-2">
+            수익 모델
+            <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-neutral-950 transition-all duration-200 group-hover:w-full"></span>
+          </a>
+          <a href="#roadmap" class="hover:text-neutral-950 transition-colors tracking-widest relative group py-2">
+            정주 로드맵
+            <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-neutral-950 transition-all duration-200 group-hover:w-full"></span>
+          </a>
+          <a href="#founder" class="hover:text-neutral-950 transition-colors tracking-widest relative group py-2">
+            창직자 소개
+            <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-neutral-950 transition-all duration-200 group-hover:w-full"></span>
+          </a>
+        </nav>
+
+        <!-- Zone 2: Iconic Central Wordmark (GAZU Style) -->
+        <div class="flex flex-col items-center justify-center text-center">
+          <a href="#" class="flex flex-col items-center group">
+            <span class="text-2xl sm:text-3xl font-black tracking-tight text-neutral-950 font-sans group-hover:opacity-90 transition-opacity">
+              AX PM
+            </span>
+            <span class="text-[9px] sm:text-[10px] tracking-[0.24em] font-medium text-neutral-500 uppercase mt-[-2px]">
+              REGIONAL MANUFACTURING PARTNER
+            </span>
+          </a>
+        </div>
+
+        <!-- Zone 3: Actions -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="#diagnostic" class="px-4 py-2 text-xs font-semibold tracking-wider uppercase border border-neutral-300 text-neutral-800 hover:border-neutral-900 hover:text-neutral-950 transition-all bg-transparent">
+            AI 잠재력 셀프 진단
+          </a>
+          <button onclick="openConsultModal()" class="px-4 py-2 text-xs font-semibold tracking-wider uppercase bg-[#111111] text-white hover:bg-neutral-800 transition-all flex items-center gap-1.5 shadow-sm">
+            <span>무료 방문 신청</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <a href="#diagnostic" class="px-2.5 py-1.5 text-[11px] font-semibold tracking-wider border border-neutral-300 text-neutral-900">
+            진단하기
+          </a>
+          <button onclick="toggleMobileMenu()" class="p-2 text-neutral-800 hover:text-neutral-950" aria-label="Toggle menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Drawer -->
+      <div id="mobileDrawer" class="hidden lg:hidden bg-[#f5f4f0] border-b border-neutral-300 px-6 py-6 space-y-4">
+        <nav class="flex flex-col space-y-3">
+          <a href="#solutions" onclick="toggleMobileMenu()" class="text-sm font-semibold tracking-wide text-neutral-800 hover:text-neutral-950 py-1">핵심 솔루션</a>
+          <a href="#pain-points" onclick="toggleMobileMenu()" class="text-sm font-semibold tracking-wide text-neutral-800 hover:text-neutral-950 py-1">현장 애로 진단</a>
+          <a href="#revenue" onclick="toggleMobileMenu()" class="text-sm font-semibold tracking-wide text-neutral-800 hover:text-neutral-950 py-1">수익 모델</a>
+          <a href="#roadmap" onclick="toggleMobileMenu()" class="text-sm font-semibold tracking-wide text-neutral-800 hover:text-neutral-950 py-1">정주 로드맵</a>
+          <a href="#founder" onclick="toggleMobileMenu()" class="text-sm font-semibold tracking-wide text-neutral-800 hover:text-neutral-950 py-1">창직자 소개</a>
+          <a href="#faq" onclick="toggleMobileMenu()" class="text-sm font-semibold tracking-wide text-neutral-800 hover:text-neutral-950 py-1">자주 묻는 질문</a>
+        </nav>
+        <div class="pt-4 border-t border-neutral-300 flex flex-col gap-2">
+          <a href="#diagnostic" onclick="toggleMobileMenu()" class="w-full py-2.5 text-xs font-semibold tracking-wider uppercase border border-neutral-900 text-neutral-900 text-center">
+            무료 AX 잠재력 진단
+          </a>
+          <button onclick="toggleMobileMenu(); openConsultModal();" class="w-full py-2.5 text-xs font-semibold tracking-wider uppercase bg-neutral-950 text-white text-center flex items-center justify-center gap-1">
+            <span>1:1 현장방문 컨설팅 신청</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- 2. Hero Section: Benchmarking GAZU Hero Layout & Typography -->
+      <section class="relative w-full bg-[#f5f4f0] overflow-hidden border-b border-neutral-300/80 pt-6 pb-12 sm:pt-10 sm:pb-16 lg:pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <!-- Top Minimalist Tagline -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4 sm:mb-6">
+            <div class="text-[11px] sm:text-xs font-bold tracking-[0.2em] text-neutral-600 uppercase border-l-2 border-neutral-900 pl-3">
+              AI TRANSFORMATION THAT POWERS REGIONAL FACTORIES
+            </div>
+            <div class="hidden md:flex items-center gap-3 text-xs text-neutral-500 font-medium">
+              <span>지역 정주형 1인 창직 모델</span>
+              <span>·</span>
+              <span>중기부·산업부 국책과제 연계</span>
+              <span>·</span>
+              <span class="text-neutral-900 font-semibold">2026 전략 PM</span>
+            </div>
+          </div>
+
+          <!-- Hero Main Stage with Giant Background Typographic Element -->
+          <div class="relative min-h-[500px] lg:min-h-[580px] flex flex-col justify-between pt-2">
+            
+            <!-- Giant Typographic Background "AX PM" -->
+            <div aria-hidden="true" class="absolute inset-0 flex items-center justify-center select-none pointer-events-none opacity-[0.06] sm:opacity-[0.07] overflow-hidden">
+              <span class="text-[28vw] font-black tracking-tighter text-neutral-950 font-sans leading-none">
+                AX PM
+              </span>
+            </div>
+
+            <!-- Foreground Two Columns -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+              
+              <!-- Left Column: Copy & Value Proposition -->
+              <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
+                <div class="space-y-3">
+                  <span class="inline-block text-[11px] font-bold tracking-widest uppercase text-neutral-500">
+                    신직업 제안 · 지역 정주형 솔루션 PM
+                  </span>
+                  
+                  <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[2.9rem] font-extrabold text-neutral-950 tracking-tight leading-[1.18] text-balance">
+                    전통 제조업의 기술 장벽을 허물고,<br />
+                    <span class="underline decoration-neutral-300 decoration-2 underline-offset-8">
+                      AI 솔루션 도입과 정부 R&D 연계
+                    </span>로<br />
+                    지역 공장의 확실한 성장을 이끕니다.
+                  </h1>
+                </div>
+
+                <p class="text-base sm:text-lg text-neutral-700 leading-relaxed font-normal max-w-2xl">
+                  4차 산업혁명과 AI 자율제조 시대, 지역 중소 제조기업의 디지털 격차를 해소하고 
+                  경영진의 결단과 현장 엔지니어의 실행 사이 기술적 간극을 좁히는 
+                  <strong class="font-semibold text-neutral-950">지역 정주형 AI 대전환(AX) 전략 PM</strong>입니다.
+                </p>
+
+                <!-- Action Buttons (Faithful to GAZU "SHOP NOW" & "EXPLORE NEW IN") -->
+                <div class="pt-2 flex flex-wrap items-center gap-4">
+                  <a href="#diagnostic" class="px-6 py-3.5 bg-[#111111] text-white text-xs sm:text-sm font-semibold tracking-wider uppercase hover:bg-neutral-800 transition-all flex items-center gap-2 group shadow-sm">
+                    <span>무료 AX 잠재력 진단 받기</span>
+                    <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                  </a>
+
+                  <a href="#roadmap" class="px-4 py-3 text-xs sm:text-sm font-semibold tracking-wider text-neutral-900 uppercase hover:text-neutral-600 transition-colors border-b border-neutral-900 hover:border-neutral-600 flex items-center gap-1.5">
+                    <span>2026 정부지원 R&D 매칭 확인</span>
+                    <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+
+                <!-- Trust Metrics Bar -->
+                <div class="pt-4 border-t border-neutral-300/80 grid grid-cols-3 gap-3 max-w-lg text-neutral-800">
+                  <div class="space-y-0.5">
+                    <span class="text-[10px] tracking-wider uppercase text-neutral-500 font-semibold block">정부지원금 연계</span>
+                    <p class="text-sm font-bold text-neutral-950">최대 70~90%</p>
+                  </div>
+                  <div class="space-y-0.5">
+                    <span class="text-[10px] tracking-wider uppercase text-neutral-500 font-semibold block">첫 가치 검증</span>
+                    <p class="text-sm font-bold text-neutral-950">4주 퀵윈(Quick-Win)</p>
+                  </div>
+                  <div class="space-y-0.5">
+                    <span class="text-[10px] tracking-wider uppercase text-neutral-500 font-semibold block">현장 맞춤율</span>
+                    <p class="text-sm font-bold text-neutral-950">100% 현장 밀착</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Editorial Hero Photo -->
+              <div class="lg:col-span-5 relative">
+                <div class="relative group overflow-hidden border border-neutral-300/80 bg-neutral-200 shadow-md">
+                  <img
+                    src="/assets/images/hero_ax_pm_factory_1794011318221.jpg"
+                    alt="지역 제조기업 현장을 누비는 AI 대전환 전략 PM"
+                    class="w-full h-[400px] sm:h-[480px] lg:h-[520px] object-cover object-center filter contrast-[1.02] brightness-[0.98] transition-transform duration-700 group-hover:scale-102"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent pointer-events-none"></div>
+
+                  <!-- Overlay Badge -->
+                  <div class="absolute bottom-5 left-5 right-5 text-white flex items-end justify-between">
+                    <div class="space-y-1">
+                      <span class="text-[10px] tracking-[0.2em] uppercase text-neutral-300 font-bold block">ON-SITE STRATEGY PM</span>
+                      <h3 class="text-base sm:text-lg font-bold tracking-tight">현장과 기술, 정책 자금을 잇는 전략가</h3>
+                      <p class="text-xs text-neutral-300">제조 현장 이해도 · 공감 소통 · 산학연 R&D 기획</p>
+                    </div>
+                    <button onclick="openConsultModal()" class="shrink-0 bg-white/95 text-neutral-950 text-[11px] font-bold px-3 py-2 uppercase tracking-wider hover:bg-white transition-colors">
+                      1:1 방문 신청
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Minimalist Marker -->
+                <div class="hidden sm:block absolute -bottom-6 right-2 text-right">
+                  <span class="text-[10px] font-mono tracking-widest text-neutral-400 block uppercase">REGIONAL SETTLEMENT</span>
+                  <span class="text-xs font-mono font-bold tracking-widest text-neutral-900">ROADMAP 2026</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 3. Dark 3-Column Strip (GAZU "MEN / WOMEN / KIDS" Row Benchmark) -->
+      <section class="w-full bg-[#111111] text-white py-10 sm:py-14 border-y border-neutral-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 divide-y md:divide-y-0 md:divide-x divide-neutral-800">
+            
+            <!-- Col 1 -->
+            <div onclick="document.getElementById('diagnostic').scrollIntoView({behavior:'smooth'})" class="flex items-center gap-5 group cursor-pointer transition-colors">
+              <div class="w-20 h-24 sm:w-24 sm:h-28 shrink-0 overflow-hidden bg-neutral-800 border border-neutral-700/60">
+                <img src="/assets/images/smart_vision_factory_1794011317729.jpg" alt="현장 밀착 진단" class="w-full h-full object-cover filter brightness-90 group-hover:scale-105 group-hover:brightness-105 transition-all duration-300" />
+              </div>
+              <div class="flex-1 space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="text-[10px] font-mono tracking-widest text-neutral-400">01</span>
+                  <span class="text-[10px] font-mono tracking-widest text-neutral-500 uppercase">SITE ASSESSMENT</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold tracking-tight text-white group-hover:text-neutral-200 transition-colors">현장 밀착 진단</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed line-clamp-2">공장장·실무진 눈높이에서 공정 병목과 실현 가능한 4주 퀵윈(Quick-Win) 솔루션을 도출합니다.</p>
+                <div class="pt-1 flex items-center gap-1 text-xs font-semibold tracking-wider text-neutral-300 uppercase group-hover:text-white transition-colors">
+                  <span>무료 진단 신청</span>
+                  <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Col 2 -->
+            <div onclick="document.getElementById('revenue').scrollIntoView({behavior:'smooth'})" class="flex items-center gap-5 group cursor-pointer transition-colors pt-6 md:pt-0 md:pl-8 lg:pl-10">
+              <div class="w-20 h-24 sm:w-24 sm:h-28 shrink-0 overflow-hidden bg-neutral-800 border border-neutral-700/60">
+                <img src="/assets/images/rd_collaboration_lab_1794011318811.jpg" alt="정부 R&D 국책과제 연계" class="w-full h-full object-cover filter brightness-90 group-hover:scale-105 group-hover:brightness-105 transition-all duration-300" />
+              </div>
+              <div class="flex-1 space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="text-[10px] font-mono tracking-widest text-neutral-400">02</span>
+                  <span class="text-[10px] font-mono tracking-widest text-neutral-500 uppercase">GOV GRANT & R&D</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold tracking-tight text-white group-hover:text-neutral-200 transition-colors">정부 R&D 국책과제 연계</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed line-clamp-2">중기부·산업부 스마트제조 R&D 과제 기획부터 수주까지 자부담을 70~90% 절감합니다.</p>
+                <div class="pt-1 flex items-center gap-1 text-xs font-semibold tracking-wider text-neutral-300 uppercase group-hover:text-white transition-colors">
+                  <span>지원사업 확인</span>
+                  <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Col 3 -->
+            <div onclick="document.getElementById('roadmap').scrollIntoView({behavior:'smooth'})" class="flex items-center gap-5 group cursor-pointer transition-colors pt-6 md:pt-0 md:pl-8 lg:pl-10">
+              <div class="w-20 h-24 sm:w-24 sm:h-28 shrink-0 overflow-hidden bg-neutral-800 border border-neutral-700/60">
+                <img src="/assets/images/pdm_sensor_machinery_1794011318786.jpg" alt="산학연 인프라 & 가교" class="w-full h-full object-cover filter brightness-90 group-hover:scale-105 group-hover:brightness-105 transition-all duration-300" />
+              </div>
+              <div class="flex-1 space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="text-[10px] font-mono tracking-widest text-neutral-400">03</span>
+                  <span class="text-[10px] font-mono tracking-widest text-neutral-500 uppercase">REGIONAL ECOSYSTEM</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold tracking-tight text-white group-hover:text-neutral-200 transition-colors">산학연 인프라 & 가교</h3>
+                <p class="text-xs text-neutral-400 leading-relaxed line-clamp-2">지방행정기관과 지역 대학원 R&D를 결합하고, 경영진과 현장의 기술적 간극을 해소합니다.</p>
+                <div class="pt-1 flex items-center gap-1 text-xs font-semibold tracking-wider text-neutral-300 uppercase group-hover:text-white transition-colors">
+                  <span>정주 네트워크</span>
+                  <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Problem Definition & Target Pain Points (GAZU "NEW SEASON / NEW VIBES" Split Benchmark) -->
+      <section id="pain-points" class="w-full bg-[#f5f4f0] py-16 sm:py-24 border-b border-neutral-300/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            
+            <!-- Left Headline & Content -->
+            <div class="lg:col-span-6 space-y-6">
+              <div class="space-y-2">
+                <span class="text-[11px] font-mono tracking-widest uppercase text-neutral-500 font-semibold block">
+                  PROBLEM DEFINITION & TARGET CUSTOMERS
+                </span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-neutral-950 tracking-tight leading-[1.12]">
+                  FROM DIGITAL GAP<br />
+                  TO SMART AX FACTORY
+                </h2>
+              </div>
+
+              <p class="text-base sm:text-lg text-neutral-700 font-normal leading-relaxed">
+                4차 산업혁명과 AI 전환의 흐름 속에서 대기업과 지역 중소 제조기업 간의 
+                <strong>디지털 격차</strong>는 날로 심화되고 있습니다. 
+                전문 인력 부족, 비용 부담, 그리고 경영진과 현장 작업자 간의 소통 단절이 가장 큰 장벽입니다.
+              </p>
+
+              <!-- Pain Point 3 Cards -->
+              <div class="space-y-3.5 pt-2">
+                <div class="bg-white/80 border border-neutral-300/70 p-4 sm:p-5 transition-all hover:border-neutral-900 group">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold tracking-wider text-neutral-900 uppercase">01. 경영진 (대표이사 / 임원)</span>
+                    <span class="text-[11px] font-mono text-neutral-400">PAIN 01</span>
+                  </div>
+                  <p class="text-xs sm:text-sm text-neutral-600 mb-2 leading-relaxed">
+                    <strong class="text-neutral-900">현장 애로:</strong> AI 도입 필요성은 느끼나 비용 부담과 전문 지식 부족으로 어디서부터 손대야 할지 모르는 막막함.
+                  </p>
+                  <div class="text-xs text-neutral-900 font-medium flex items-start gap-1.5 pt-1 border-t border-neutral-100">
+                    <span class="text-neutral-950 font-bold shrink-0">AX PM 해결책:</span>
+                    <span>정부 R&D 국비 연계로 자부담을 70~90% 절감하고, 4주 퀵윈 모델로 불확실성을 제거합니다.</span>
+                  </div>
+                </div>
+
+                <div class="bg-white/80 border border-neutral-300/70 p-4 sm:p-5 transition-all hover:border-neutral-900 group">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold tracking-wider text-neutral-900 uppercase">02. 현장 실무 (공장장 / 생산기술)</span>
+                    <span class="text-[11px] font-mono text-neutral-400">PAIN 02</span>
+                  </div>
+                  <p class="text-xs sm:text-sm text-neutral-600 mb-2 leading-relaxed">
+                    <strong class="text-neutral-900">현장 애로:</strong> 라인 중단 우려, 기존 낡은 기계와의 호환성 불투명, 외지 IT 업체의 일방적인 소통 피로감.
+                  </p>
+                  <div class="text-xs text-neutral-900 font-medium flex items-start gap-1.5 pt-1 border-t border-neutral-100">
+                    <span class="text-neutral-950 font-bold shrink-0">AX PM 해결책:</span>
+                    <span>기존 설비를 보존하는 비침습적 센서·비전 적용 및 작업자 눈높이 현장 소통을 구현합니다.</span>
+                  </div>
+                </div>
+
+                <div class="bg-white/80 border border-neutral-300/70 p-4 sm:p-5 transition-all hover:border-neutral-900 group">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold tracking-wider text-neutral-900 uppercase">03. 지역 생태계 (산학연 인프라)</span>
+                    <span class="text-[11px] font-mono text-neutral-400">PAIN 03</span>
+                  </div>
+                  <p class="text-xs sm:text-sm text-neutral-600 mb-2 leading-relaxed">
+                    <strong class="text-neutral-900">현장 애로:</strong> 지역 제조기업과 대학원 연구 인프라 및 정부 예산 간의 연계 채널 단절.
+                  </p>
+                  <div class="text-xs text-neutral-900 font-medium flex items-start gap-1.5 pt-1 border-t border-neutral-100">
+                    <span class="text-neutral-950 font-bold shrink-0">AX PM 해결책:</span>
+                    <span>지역 정주형 PM으로서 현장 수요와 대학원 기술, 지자체 R&D 과제를 삼각 연계합니다.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <a href="#diagnostic" class="inline-flex items-center gap-2 px-6 py-3.5 bg-[#111111] text-white text-xs sm:text-sm font-semibold tracking-wider uppercase hover:bg-neutral-800 transition-all">
+                  <span>우리 공장 문제 진단하기</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Visual Image -->
+            <div class="lg:col-span-6 relative">
+              <div class="relative border border-neutral-300 bg-neutral-900 overflow-hidden shadow-md">
+                <img
+                  src="/assets/images/smart_vision_factory_1794011317729.jpg"
+                  alt="스마트 제조 머신비전 검사 공정"
+                  class="w-full h-[420px] sm:h-[480px] object-cover filter contrast-[1.05] brightness-95"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none"></div>
+
+                <div class="absolute bottom-6 left-6 right-6 text-white space-y-2">
+                  <span class="text-[10px] font-mono tracking-widest text-neutral-400 uppercase">
+                    CORE ADVANTAGE · 창직자의 정주 동력
+                  </span>
+                  <h3 class="text-lg sm:text-xl font-bold tracking-tight">
+                    "제조업 현장을 깊이 아는 PM만이 소통을 이끕니다"
+                  </h3>
+                  <p class="text-xs text-neutral-300 leading-relaxed">
+                    외지 IT 컨설턴트의 일방적 기술 주입이 아닌, 공장장과 현장 작업자의 피로감을 공감하고 
+                    기존 설비를 최대한 보존하면서 4주 만에 결과를 내는 현장 중심 접근을 고수합니다.
+                  </p>
+                  <div class="pt-2 flex items-center gap-4 text-[11px] text-neutral-300 font-mono">
+                    <span>· 공감 커뮤니케이션</span>
+                    <span>· 비침습적 센서 도입</span>
+                    <span>· 산학연 인프라 결합</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. 4-Item Trust & Value Strip (GAZU "FAST DELIVERY..." Benchmark) -->
+      <section class="w-full bg-[#f5f4f0] py-10 sm:py-12 border-b border-neutral-300/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            
+            <div class="flex items-center gap-4 p-2 transition-transform hover:translate-y-[-2px]">
+              <div class="w-12 h-12 shrink-0 border border-neutral-400/80 flex items-center justify-center bg-white text-neutral-900 shadow-xs">
+                <svg class="w-5 h-5 stroke-[1.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+              </div>
+              <div class="space-y-0.5">
+                <h4 class="text-xs sm:text-sm font-bold tracking-tight text-neutral-950 uppercase">100% 현장 밀착 소통</h4>
+                <p class="text-[11px] sm:text-xs text-neutral-600 leading-snug">공장장·작업자 눈높이 맞춤, 현장 거부감 제로</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-2 transition-transform hover:translate-y-[-2px]">
+              <div class="w-12 h-12 shrink-0 border border-neutral-400/80 flex items-center justify-center bg-white text-neutral-900 shadow-xs">
+                <svg class="w-5 h-5 stroke-[1.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </div>
+              <div class="space-y-0.5">
+                <h4 class="text-xs sm:text-sm font-bold tracking-tight text-neutral-950 uppercase">정부 R&D 국비 매칭</h4>
+                <p class="text-[11px] sm:text-xs text-neutral-600 leading-snug">최대 70~90% 국비 지원으로 기업 자부담 최소화</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-2 transition-transform hover:translate-y-[-2px]">
+              <div class="w-12 h-12 shrink-0 border border-neutral-400/80 flex items-center justify-center bg-white text-neutral-900 shadow-xs">
+                <svg class="w-5 h-5 stroke-[1.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div class="space-y-0.5">
+                <h4 class="text-xs sm:text-sm font-bold tracking-tight text-neutral-950 uppercase">4주 퀵윈(Quick-Win)</h4>
+                <p class="text-[11px] sm:text-xs text-neutral-600 leading-snug">대규모 투자 전 4주 내 가시적 성과 검증</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-2 transition-transform hover:translate-y-[-2px]">
+              <div class="w-12 h-12 shrink-0 border border-neutral-400/80 flex items-center justify-center bg-white text-neutral-900 shadow-xs">
+                <svg class="w-5 h-5 stroke-[1.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div class="space-y-0.5">
+                <h4 class="text-xs sm:text-sm font-bold tracking-tight text-neutral-950 uppercase">지역 정주형 파트너</h4>
+                <p class="text-[11px] sm:text-xs text-neutral-600 leading-snug">일회성 외지 업체가 아닌 지역 상주 지속 책임 PM</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Solution Showcase Grid (GAZU "BEST OF GAZU" Product Grid Benchmark) -->
+      <section id="solutions" class="w-full bg-[#f5f4f0] py-16 sm:py-24 border-b border-neutral-300/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <!-- Header -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-12">
+            <div class="space-y-1">
+              <span class="text-[11px] font-mono tracking-widest text-neutral-500 uppercase font-semibold">
+                FEATURED AX SOLUTIONS & 4-WEEK QUICK-WIN
+              </span>
+              <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-neutral-950 uppercase font-sans">
+                BEST OF AX SOLUTIONS
+              </h2>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap items-center gap-1.5 p-1 bg-white/70 border border-neutral-300/80">
+              <button onclick="filterSolutions('all', this)" class="filter-btn active px-3 py-1.5 text-xs font-semibold tracking-wider transition-all whitespace-nowrap bg-[#111111] text-white shadow-xs">
+                전체 솔루션
+              </button>
+              <button onclick="filterSolutions('vision', this)" class="filter-btn px-3 py-1.5 text-xs font-semibold tracking-wider transition-all whitespace-nowrap text-neutral-700 hover:text-neutral-950 hover:bg-neutral-200/50">
+                품질 검사(머신비전)
+              </button>
+              <button onclick="filterSolutions('pdm', this)" class="filter-btn px-3 py-1.5 text-xs font-semibold tracking-wider transition-all whitespace-nowrap text-neutral-700 hover:text-neutral-950 hover:bg-neutral-200/50">
+                설비 예지보전(PdM)
+              </button>
+              <button onclick="filterSolutions('energy', this)" class="filter-btn px-3 py-1.5 text-xs font-semibold tracking-wider transition-all whitespace-nowrap text-neutral-700 hover:text-neutral-950 hover:bg-neutral-200/50">
+                공정·에너지 최적화
+              </button>
+              <button onclick="filterSolutions('rd', this)" class="filter-btn px-3 py-1.5 text-xs font-semibold tracking-wider transition-all whitespace-nowrap text-neutral-700 hover:text-neutral-950 hover:bg-neutral-200/50">
+                정부 R&D 기획
+              </button>
+            </div>
+          </div>
+
+          <!-- Solution Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8" id="solutionsContainer">
+            
+            <!-- Solution 1: Machine Vision -->
+            <div data-cat="vision" onclick="openSolutionModal(0)" class="solution-card group cursor-pointer bg-white border border-neutral-300/80 flex flex-col justify-between transition-all hover:border-neutral-900 hover:shadow-md">
+              <div class="relative aspect-[4/3] bg-neutral-200 overflow-hidden">
+                <img src="/assets/images/smart_vision_factory_1794011317729.jpg" alt="AI 비전 검사" class="w-full h-full object-cover filter contrast-[1.02] group-hover:scale-104 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-neutral-950/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <button onclick="event.stopPropagation(); toggleBookmark('sol-1', this)" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-neutral-800 hover:text-neutral-950 shadow-xs transition-colors">
+                  <svg class="w-4 h-4 bookmark-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+                </button>
+                <div class="absolute bottom-2.5 left-2.5 bg-neutral-950/80 backdrop-blur-xs text-white text-[10px] font-semibold tracking-wider px-2 py-0.5 uppercase">
+                  품질 검사 / 비전
+                </div>
+              </div>
+              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3">
+                <div>
+                  <h3 class="text-sm sm:text-base font-bold text-neutral-950 tracking-tight leading-snug group-hover:text-neutral-700 transition-colors line-clamp-2">
+                    인공지능 머신비전 자동 불량 판정 솔루션
+                  </h3>
+                  <p class="text-xs text-neutral-500 mt-1 line-clamp-2">
+                    미세 스크래치, 크랙, 이물질 실시간 인라인 검출 및 육안 검사원 인력난 해소
+                  </p>
+                </div>
+                <div class="space-y-1.5 pt-2 border-t border-neutral-200 text-xs">
+                  <div class="flex items-center justify-between text-neutral-600">
+                    <span class="text-[11px] text-neutral-500 font-mono">예상 성과</span>
+                    <span class="font-semibold text-neutral-900 text-right truncate pl-2">불량 검출률 99.4%</span>
+                  </div>
+                  <div class="flex items-center justify-between text-neutral-600">
+                    <span class="text-[11px] text-neutral-500 font-mono">투자 회수</span>
+                    <span class="font-semibold text-neutral-900">3.8개월 내 회수</span>
+                  </div>
+                </div>
+                <div class="pt-2 flex items-center justify-between text-xs font-semibold text-neutral-900 group-hover:underline">
+                  <span>자세히 보기</span>
+                  <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Solution 2: PdM -->
+            <div data-cat="pdm" onclick="openSolutionModal(1)" class="solution-card group cursor-pointer bg-white border border-neutral-300/80 flex flex-col justify-between transition-all hover:border-neutral-900 hover:shadow-md">
+              <div class="relative aspect-[4/3] bg-neutral-200 overflow-hidden">
+                <img src="/assets/images/pdm_sensor_machinery_1794011318786.jpg" alt="설비 예지보전" class="w-full h-full object-cover filter contrast-[1.02] group-hover:scale-104 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-neutral-950/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <button onclick="event.stopPropagation(); toggleBookmark('sol-2', this)" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-neutral-800 hover:text-neutral-950 shadow-xs transition-colors">
+                  <svg class="w-4 h-4 bookmark-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+                </button>
+                <div class="absolute bottom-2.5 left-2.5 bg-neutral-950/80 backdrop-blur-xs text-white text-[10px] font-semibold tracking-wider px-2 py-0.5 uppercase">
+                  설비 예지보전
+                </div>
+              </div>
+              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3">
+                <div>
+                  <h3 class="text-sm sm:text-base font-bold text-neutral-950 tracking-tight leading-snug group-hover:text-neutral-700 transition-colors line-clamp-2">
+                    무선 센서 기반 설비 이상 예지보전(PdM)
+                  </h3>
+                  <p class="text-xs text-neutral-500 mt-1 line-clamp-2">
+                    모터, 스핀들, 감속기 이상 진동·온도를 72시간 전 사전 예측하여 불시 정지 방지
+                  </p>
+                </div>
+                <div class="space-y-1.5 pt-2 border-t border-neutral-200 text-xs">
+                  <div class="flex items-center justify-between text-neutral-600">
+                    <span class="text-[11px] text-neutral-500 font-mono">예상 성과</span>
+                    <span class="font-semibold text-neutral-900 text-right truncate pl-2">다운타임 45% 감소</span>
+                  </div>
+                  <div class="flex items-center justify-between text-neutral-600">
+                    <span class="text-[11px] text-neutral-500 font-mono">투자 회수</span>
+                    <span class="font-semibold text-neutral-900">1회 정지 방지로 회수</span>
+                  </div>
+                </div>
+                <div class="pt-2 flex items-center justify-between text-xs font-semibold text-neutral-900 group-hover:underline">
+                  <span>자세히 보기</span>
+                  <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Solution 3: Gov R&D -->
+            <div data-cat="rd" onclick="openSolutionModal(2)" class="solution-card group cursor-pointer bg-white border border-neutral-300/80 flex flex-col justify-between transition-all hover:border-neutral-900 hover:shadow-md">
+              <div class="relative aspect-[4/3] bg-neutral-200 overflow-hidden">
+                <img src="/assets/images/rd_collaboration_lab_1794011318811.jpg" alt="정부 R&D 국책과제" class="w-full h-full object-cover filter contrast-[1.02] group-hover:scale-104 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-neutral-950/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <button onclick="event.stopPropagation(); toggleBookmark('sol-3', this)" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-neutral-800 hover:text-neutral-950 shadow-xs transition-colors">
+                  <svg class="w-4 h-4 bookmark-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+                </button>
+                <div class="absolute bottom-2.5 left-2.5 bg-neutral-950/80 backdrop-blur-xs text-white text-[10px] font-semibold tracking-wider px-2 py-0.5 uppercase">
+                  정부 R&D 기획
+                </div>
+              </div>
+              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3">
+                <div>
+                  <h3 class="text-sm sm:text-base font-bold text-neutral-950 tracking-tight leading-snug group-hover:text-neutral-700 transition-colors line-clamp-2">
+                    제조 AI 자율제조 국책과제 수주 패키지
+                  </h3>
+                  <p class="text-xs text-neutral-500 mt-1 line-clamp-2">
+                    중기부·산업부 R&D 사업계획서 기획부터 산학연 컨소시엄 및 발표평가 코칭
+                  </p>
+                </div>
+                <div class="space-y-1.5 pt-2 border-t border-neutral-200 text-xs">
+                  <div class="flex items-center justify-between text-neutral-600">
+                    <span class="text-[11px] text-neutral-500 font-mono">예상 성과</span>
+                    <span class="font-semibold text-neutral-900 text-right truncate pl-2">선정률 85% 이상</span>
+                  </div>
+                  <div class="flex items-center justify-between text-neutral-600">
+                    <span class="text-[11px] text-neutral-500 font-mono">투자 회수</span>
+                    <span class="font-semibold text-neutral-900">수주 시 성공보수</span>
+                  </div>
+                </div>
+                <div class="pt-2 flex items-center justify-between text-xs font-semibold text-neutral-900 group-hover:underline">
+                  <span>자세히 보기</span>
+                  <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Solution 4: Energy & Process -->
+            <div data-cat="energy" onclick="openSolutionModal(3)" class="solution-card group cursor-pointer bg-white border border-neutral-300/80 flex flex-col justify-between transition-all hover:border-neutral-900 hover:shadow-md">
+              <div class="relative aspect-[4/3] bg-neutral-200 overflow-hidden">
+                <img src="/assets/images/hero_ax_pm_factory_1794011318221.jpg" alt="피크 전력 최적화" class="w-full h-full object-cover filter contrast-[1.02] group-hover:scale-104 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-neutral-950/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <button onclick="event.stopPropagation(); toggleBookmark('sol-4', this)" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-neutral-800 hover:text-neutral-950 shadow-xs transition-colors">
+                  <svg class="w-4 h-4 bookmark-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+                </button>
+                <div class="absolute bottom-2.5 left-2.5 bg-neutral-950/80 backdrop-blur-xs text-white text-[10px] font-semibold tracking-wider px-2 py-0.5 uppercase">
+                  공정·에너지 최적화
+                </div>
+              </div>
+              <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3">
+                <div>
+                  <h3 class="text-sm sm:text-base font-bold text-neutral-950 tracking-tight leading-snug group-hover:text-neutral-700 transition-colors line-clamp-2">
+                    열처리·사출 AI 피크 전력 및 에너지 절감 제어
+                  </h3>
+                  <p class="text-xs text-neutral-500 mt-1 line-clamp-2">
+                    공정 온도/압력 최적 제어로 품질 편차 방지 및 산업용 전기요금 18% 절감
+                  </p>
+                </div>
+                <div class="space-y-1.5 pt-2 border-t border-neutral-200 text-xs">
+                  <div class="flex items-center justify-between text-neutral-600">
+                    <span class="text-[11px] text-neutral-500 font-mono">예상 성과</span>
+                    <span class="font-semibold text-neutral-900 text-right truncate pl-2">전력비 18.2% 절감</span>
+                  </div>
+                  <div class="flex items-center justify-between text-neutral-600">
+                    <span class="text-[11px] text-neutral-500 font-mono">투자 회수</span>
+                    <span class="font-semibold text-neutral-900">5개월 내 회수</span>
+                  </div>
+                </div>
+                <div class="pt-2 flex items-center justify-between text-xs font-semibold text-neutral-900 group-hover:underline">
+                  <span>자세히 보기</span>
+                  <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Interactive MVP Diagnostic Simulator (Report Section 4 MVP Tool) -->
+      <section id="diagnostic" class="w-full bg-[#f0eee9] py-16 sm:py-24 border-b border-neutral-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-3xl mx-auto space-y-3 mb-12 sm:mb-16">
+            <span class="text-[11px] font-mono tracking-widest uppercase text-neutral-500 font-bold block">
+              INTERACTIVE MVP DIAGNOSIS · 무료 진단 도구
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-neutral-950 tracking-tight">
+              우리 공장 AI 잠재력 & 4주 퀵윈 진단기
+            </h2>
+            <p class="text-sm sm:text-base text-neutral-600 leading-relaxed">
+              공장 업종과 현재 현장 상황을 선택하시면, 최적의 <strong>4주 퀵윈(Quick-Win) 솔루션 1건</strong>과 
+              즉시 매칭 가능한 <strong>2026 정부 R&D 국책 지원사업</strong>을 시뮬레이션해 드립니다.
+            </p>
+          </div>
+
+          <!-- Simulator Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Left Input Controls -->
+            <div class="lg:col-span-7 bg-white border border-neutral-300 p-6 sm:p-8 space-y-8 shadow-xs">
+              
+              <!-- Step 1 -->
+              <div class="space-y-3">
+                <label class="text-xs font-bold uppercase tracking-wider text-neutral-900 flex items-center justify-between">
+                  <span>STEP 01. 제조업종 선택</span>
+                  <span class="text-[11px] font-mono text-neutral-400">필수</span>
+                </label>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2" id="industryGrid">
+                  <button type="button" onclick="selectIndustry('금속가공 / 정밀기계', this)" class="ind-btn active py-2.5 px-3 text-xs font-semibold tracking-wide border transition-all text-left border-neutral-950 bg-neutral-950 text-white">금속가공 / 정밀기계</button>
+                  <button type="button" onclick="selectIndustry('자동차 부품', this)" class="ind-btn py-2.5 px-3 text-xs font-semibold tracking-wide border transition-all text-left border-neutral-200 bg-neutral-50/50 text-neutral-700 hover:border-neutral-400">자동차 부품</button>
+                  <button type="button" onclick="selectIndustry('플라스틱 / 사출', this)" class="ind-btn py-2.5 px-3 text-xs font-semibold tracking-wide border transition-all text-left border-neutral-200 bg-neutral-50/50 text-neutral-700 hover:border-neutral-400">플라스틱 / 사출</button>
+                  <button type="button" onclick="selectIndustry('전기·전자 조립', this)" class="ind-btn py-2.5 px-3 text-xs font-semibold tracking-wide border transition-all text-left border-neutral-200 bg-neutral-50/50 text-neutral-700 hover:border-neutral-400">전기·전자 조립</button>
+                  <button type="button" onclick="selectIndustry('화학 / 소재', this)" class="ind-btn py-2.5 px-3 text-xs font-semibold tracking-wide border transition-all text-left border-neutral-200 bg-neutral-50/50 text-neutral-700 hover:border-neutral-400">화학 / 소재</button>
+                  <button type="button" onclick="selectIndustry('기타 제조업', this)" class="ind-btn py-2.5 px-3 text-xs font-semibold tracking-wide border transition-all text-left border-neutral-200 bg-neutral-50/50 text-neutral-700 hover:border-neutral-400">기타 제조업</button>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="space-y-3">
+                <label class="text-xs font-bold uppercase tracking-wider text-neutral-900 flex items-center justify-between">
+                  <span>STEP 02. 현재 공장 디지털화 수준</span>
+                  <span class="text-[11px] font-mono text-neutral-400">기존 설비 보존 원칙</span>
+                </label>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  <div onclick="selectStatus('수기 기록 / 아날로그', this)" class="stat-card active p-3 border cursor-pointer transition-all border-neutral-950 bg-neutral-950 text-white">
+                    <p class="text-xs font-bold tracking-tight">수기 기록 / 아날로그</p>
+                    <p class="text-[11px] mt-0.5 leading-tight opacity-80">작업 일지 수기 작성, 설비 데이터 미축적</p>
+                  </div>
+                  <div onclick="selectStatus('기본 PLC / 엑셀 관리', this)" class="stat-card p-3 border cursor-pointer transition-all border-neutral-200 bg-neutral-50/50 hover:border-neutral-400 text-neutral-800">
+                    <p class="text-xs font-bold tracking-tight">기본 PLC / 엑셀 관리</p>
+                    <p class="text-[11px] mt-0.5 leading-tight text-neutral-500">일부 데이터 엑셀 취합, 센서 미부착</p>
+                  </div>
+                  <div onclick="selectStatus('기초 MES 도입 완료', this)" class="stat-card p-3 border cursor-pointer transition-all border-neutral-200 bg-neutral-50/50 hover:border-neutral-400 text-neutral-800">
+                    <p class="text-xs font-bold tracking-tight">기초 MES 도입 완료</p>
+                    <p class="text-[11px] mt-0.5 leading-tight text-neutral-500">실적 모니터링 중이나 AI 분석 부재</p>
+                  </div>
+                  <div onclick="selectStatus('IoT 센서 축적 중', this)" class="stat-card p-3 border cursor-pointer transition-all border-neutral-200 bg-neutral-50/50 hover:border-neutral-400 text-neutral-800">
+                    <p class="text-xs font-bold tracking-tight">IoT 센서 축적 중</p>
+                    <p class="text-[11px] mt-0.5 leading-tight text-neutral-500">데이터는 쌓이나 이상 예측 활용 불가</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="space-y-3">
+                <label class="text-xs font-bold uppercase tracking-wider text-neutral-900 flex items-center justify-between">
+                  <span>STEP 03. 가장 시급한 현장 병목 과제</span>
+                  <span class="text-[11px] font-mono text-neutral-400">우선 해결 목표</span>
+                </label>
+                <div class="space-y-2">
+                  <label onclick="selectBottleneck(0, this)" class="bn-option flex items-center justify-between p-3 border cursor-pointer transition-all border-neutral-950 bg-neutral-100 font-semibold text-neutral-950">
+                    <div class="flex items-center gap-3">
+                      <span class="dot w-3.5 h-3.5 rounded-full border border-neutral-950 bg-neutral-950 flex items-center justify-center">
+                        <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                      </span>
+                      <span class="text-xs">육안 불량 검사 인력 부족 및 오판정</span>
+                    </div>
+                    <span class="text-[11px] text-neutral-500 font-mono hidden sm:inline">AI 엣지 머신비전 퀵윈</span>
+                  </label>
+
+                  <label onclick="selectBottleneck(1, this)" class="bn-option flex items-center justify-between p-3 border cursor-pointer transition-all border-neutral-200 hover:bg-neutral-50 text-neutral-700">
+                    <div class="flex items-center gap-3">
+                      <span class="dot w-3.5 h-3.5 rounded-full border border-neutral-400 flex items-center justify-center"></span>
+                      <span class="text-xs">설비 돌발 고장 및 라인 비가동 손실</span>
+                    </div>
+                    <span class="text-[11px] text-neutral-500 font-mono hidden sm:inline">무선 IoT 센서 예지보전</span>
+                  </label>
+
+                  <label onclick="selectBottleneck(2, this)" class="bn-option flex items-center justify-between p-3 border cursor-pointer transition-all border-neutral-200 hover:bg-neutral-50 text-neutral-700">
+                    <div class="flex items-center gap-3">
+                      <span class="dot w-3.5 h-3.5 rounded-full border border-neutral-400 flex items-center justify-center"></span>
+                      <span class="text-xs">전력요금 급증 및 열처리/압력 공정 편차</span>
+                    </div>
+                    <span class="text-[11px] text-neutral-500 font-mono hidden sm:inline">피크 전력 최적화 AI</span>
+                  </label>
+
+                  <label onclick="selectBottleneck(3, this)" class="bn-option flex items-center justify-between p-3 border cursor-pointer transition-all border-neutral-200 hover:bg-neutral-50 text-neutral-700">
+                    <div class="flex items-center gap-3">
+                      <span class="dot w-3.5 h-3.5 rounded-full border border-neutral-400 flex items-center justify-center"></span>
+                      <span class="text-xs">정부 R&D 국책과제 제안서 작성 한계</span>
+                    </div>
+                    <span class="text-[11px] text-neutral-500 font-mono hidden sm:inline">국책과제 수주 패키지</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Button -->
+              <button onclick="calculateDiagnostic()" class="w-full py-4 bg-[#111111] text-white text-xs sm:text-sm font-semibold tracking-wider uppercase hover:bg-neutral-800 transition-all flex items-center justify-center gap-2">
+                <span>진단 결과 실시간 갱신</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+            </div>
+
+            <!-- Right Result & Application Card -->
+            <div class="lg:col-span-5 bg-white border border-neutral-300 p-6 sm:p-8 space-y-6 shadow-xs sticky top-24">
+              <div class="flex items-center justify-between pb-3 border-b border-neutral-200">
+                <span class="text-xs font-bold uppercase tracking-wider text-neutral-900">
+                  진단 결과 리포트 (LIVE)
+                </span>
+                <span class="text-[10px] font-mono tracking-widest text-emerald-700 bg-emerald-50 px-2 py-0.5 border border-emerald-200 font-semibold">
+                  진단 완료
+                </span>
+              </div>
+
+              <div class="space-y-4">
+                <div>
+                  <span class="text-[11px] font-mono text-neutral-500 uppercase block">추천 퀵윈(Quick-Win) 솔루션 1건</span>
+                  <h3 id="resSolutionTitle" class="text-base sm:text-lg font-black text-neutral-950 mt-1">
+                    인공지능 머신비전 엣지 불량 자동 판정
+                  </h3>
+                  <p id="resSolutionDesc" class="text-xs text-neutral-600 mt-1 leading-relaxed">
+                    초기 대규모 설비 교체 없이 4주 내 실증 가능한 공정 맞춤형 솔루션입니다. 기존 라인에 소형 광학 킷을 비침습적으로 결합합니다.
+                  </p>
+                </div>
+
+                <div class="space-y-2 p-3.5 bg-[#f8f7f4] border border-neutral-200 text-xs">
+                  <div class="flex justify-between items-center">
+                    <span class="text-neutral-500">예상 소요 기간:</span>
+                    <strong class="text-neutral-950 font-mono">4주 (현장 실사~실증)</strong>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-neutral-500">자부담 절감률:</span>
+                    <strong class="text-emerald-700 font-bold font-mono">최대 70% ~ 90% 지원</strong>
+                  </div>
+                  <div class="pt-2 border-t border-neutral-200">
+                    <span class="text-neutral-500 block text-[11px]">매칭 추천 국책 R&D 사업:</span>
+                    <span id="resGrant" class="font-semibold text-neutral-950 block mt-0.5">중기부 스마트제조혁신 지원사업 (최대 2억원)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Lead Form -->
+              <div class="pt-2 border-t border-neutral-200 space-y-3">
+                <div class="space-y-0.5">
+                  <h4 class="text-xs font-bold uppercase tracking-wider text-neutral-950">
+                    무료 1:1 현장방문 컨설팅 신청
+                  </h4>
+                  <p class="text-[11px] text-neutral-500">
+                    창직자 PM이 공장을 직접 방문해 2시간 공정 실사 및 상세 진단서를 무료 증정합니다.
+                  </p>
+                </div>
+
+                <form onsubmit="submitDiagnosticLead(event)" class="space-y-2.5">
+                  <input type="text" id="diagCompany" required placeholder="기업명 (예: 대한정밀공업)" class="w-full px-3 py-2 text-xs border border-neutral-300 focus:outline-none focus:border-neutral-900 bg-white" />
+                  <div class="grid grid-cols-2 gap-2">
+                    <input type="text" id="diagName" required placeholder="담당자 성함 / 직함" class="w-full px-3 py-2 text-xs border border-neutral-300 focus:outline-none focus:border-neutral-900 bg-white" />
+                    <input type="tel" id="diagPhone" required placeholder="연락처 (010-0000-0000)" class="w-full px-3 py-2 text-xs border border-neutral-300 focus:outline-none focus:border-neutral-900 bg-white" />
+                  </div>
+                  <button type="submit" class="w-full py-2.5 bg-[#111111] text-white text-xs font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors flex items-center justify-center gap-1.5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                    <span>무료 현장방문 진단서 받기</span>
+                  </button>
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 8. Revenue Models (Report Section 3.2 Benchmark) -->
+      <section id="revenue" class="w-full bg-[#f5f4f0] py-16 sm:py-24 border-b border-neutral-300/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
+            <div class="space-y-2">
+              <span class="text-[11px] font-mono tracking-widest uppercase text-neutral-500 font-semibold block">
+                SECTION 03 · BUSINESS REVENUE MODELS
+              </span>
+              <h2 class="text-3xl sm:text-4xl font-black text-neutral-950 tracking-tight">
+                합리적이고 투명한 2대 상생 수익 모델
+              </h2>
+            </div>
+            <p class="text-xs sm:text-sm text-neutral-600 max-w-md leading-relaxed">
+              기업의 자금 사정과 프로젝트 성격에 맞춰 선택하실 수 있습니다. 국책과제 연계를 통해 초기 현금 부담을 최소화하는 상생 구조를 지향합니다.
+            </p>
+          </div>
+
+          <!-- Comparison Cards -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- Model A -->
+            <div class="p-6 sm:p-8 flex flex-col justify-between border bg-white text-neutral-950 border-neutral-300 shadow-xs">
+              <div class="space-y-6">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono tracking-widest px-2.5 py-1 font-bold bg-neutral-100 text-neutral-800">
+                    MODEL A
+                  </span>
+                  <span class="text-xs font-mono text-neutral-500">직접 용역 계약</span>
+                </div>
+
+                <div class="space-y-2">
+                  <h3 class="text-xl sm:text-2xl font-black tracking-tight leading-snug">
+                    기업 맞춤형 AX 종합 컨설팅 및 기획 용역비
+                  </h3>
+                  <p class="text-xs sm:text-sm text-neutral-600">
+                    직접 비용 집행을 통한 가장 신속한 현장 개선 및 맞춤형 솔루션 소싱
+                  </p>
+                </div>
+
+                <div class="p-3 text-xs border bg-neutral-50 border-neutral-200 text-neutral-700">
+                  <strong class="text-neutral-950">추천 대상: </strong>
+                  스마트공장 도입 또는 퀵윈 실증을 수개월 내 즉각 완료하고 싶은 중견·제조기업
+                </div>
+
+                <div class="space-y-2.5">
+                  <h4 class="text-xs font-bold uppercase tracking-wider text-neutral-900">수행 프로세스 & 제공 가치</h4>
+                  <ul class="space-y-2 text-xs text-neutral-700">
+                    <li class="flex items-start gap-2.5">
+                      <svg class="w-4 h-4 text-neutral-950 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                      <span>1단계: 공장 현장 실사 및 공정 병목 진단 (3~5일 집중)</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                      <svg class="w-4 h-4 text-neutral-950 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                      <span>2단계: 데이터 취득 가능성 및 퀵윈 솔루션 아키텍처 수립</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                      <svg class="w-4 h-4 text-neutral-950 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                      <span>3단계: AI 솔루션 벤더 소싱 및 기술 검증(PoC) 감리</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                      <svg class="w-4 h-4 text-neutral-950 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                      <span>4단계: 현장 엔지니어 및 작업자 맞춤 매뉴얼 교육</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-8 pt-6 border-t border-neutral-200 space-y-4">
+                <div>
+                  <span class="text-[10px] font-mono uppercase tracking-wider block text-neutral-500">정산 체계</span>
+                  <p class="text-sm font-bold mt-0.5">현장 규모별 기본 기획 용역비 + 4주 퀵윈 패키지</p>
+                </div>
+                <button onclick="openConsultModal('모델 A (기업 맞춤형 AX 컨설팅)')" class="w-full py-3 text-xs font-semibold uppercase tracking-wider bg-neutral-950 text-white hover:bg-neutral-800 transition-colors flex items-center justify-center gap-1.5">
+                  <span>모델 A 상담 신청</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Model B (Recommended for SMEs) -->
+            <div class="p-6 sm:p-8 flex flex-col justify-between border bg-neutral-950 text-white border-neutral-900 shadow-lg">
+              <div class="space-y-6">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono tracking-widest px-2.5 py-1 font-bold bg-white text-neutral-950">
+                    MODEL B
+                  </span>
+                  <span class="text-xs font-mono text-neutral-400">★ 지역 중소기업 추천 모델</span>
+                </div>
+
+                <div class="space-y-2">
+                  <h3 class="text-xl sm:text-2xl font-black tracking-tight leading-snug">
+                    정부/지자체 R&D 국책 과제 수주 기획 및 성공보수
+                  </h3>
+                  <p class="text-xs sm:text-sm text-neutral-300">
+                    기업의 초기 재정 부담을 최소화하는 국비 매칭 기반 상생형 모델
+                  </p>
+                </div>
+
+                <div class="p-3 text-xs border bg-neutral-900 border-neutral-800 text-neutral-300">
+                  <strong class="text-white">추천 대상: </strong>
+                  자체 자금 투자가 부담스럽고 정부 지원금(70~90%)을 활용하여 리스크를 낮추고 싶은 기업
+                </div>
+
+                <div class="space-y-2.5">
+                  <h4 class="text-xs font-bold uppercase tracking-wider text-neutral-300">수행 프로세스 & 제공 가치</h4>
+                  <ul class="space-y-2 text-xs text-neutral-300">
+                    <li class="flex items-start gap-2.5">
+                      <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                      <span>1단계: 기업 기술력 분석 및 최적 국책과제(중기부/산업부) 1:1 매칭</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                      <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                      <span>2단계: 산학연 컨소시엄(지역 대학원 및 연구원) 매칭 및 결속</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                      <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                      <span>3단계: 연구개발계획서(RFP) 작성 및 발표 심사 전담 코칭</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                      <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                      <span>4단계: 최종 과제 선정 시 연구개발비 규모에 비례한 성공보수 수취</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-8 pt-6 border-t border-neutral-800 space-y-4">
+                <div>
+                  <span class="text-[10px] font-mono uppercase tracking-wider block text-neutral-400">정산 체계</span>
+                  <p class="text-sm font-bold mt-0.5">소액 기획 착수금 + 국책과제 최종 수주 시 성공보수(5~10%)</p>
+                </div>
+                <button onclick="openConsultModal('모델 B (정부 R&D 국책과제 성공보수형)')" class="w-full py-3 text-xs font-semibold uppercase tracking-wider bg-white text-neutral-950 hover:bg-neutral-200 transition-colors flex items-center justify-center gap-1.5">
+                  <span>모델 B 상담 신청</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 9. Regional Settlement Roadmap & Tripartite Ecosystem (Report Section 5) -->
+      <section id="roadmap" class="w-full bg-[#f5f4f0] py-16 sm:py-24 border-b border-neutral-300/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="max-w-3xl space-y-3 mb-12 sm:mb-16">
+            <span class="text-[11px] font-mono tracking-widest uppercase text-neutral-500 font-semibold block">
+              SECTION 05 · REGIONAL SETTLEMENT ROADMAP & VISION
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-neutral-950 tracking-tight">
+              지역 정주 로드맵 & 산학연 협력 생태계
+            </h2>
+            <p class="text-sm sm:text-base text-neutral-600 leading-relaxed">
+              한 번 컨설팅하고 떠나는 외지 용역업체가 아닙니다. 
+              지역 제조업의 숨결을 함께 호흡하며 제조 AI 경쟁력 강화의 핵심 허브로 정착해 나가는 장기 비전입니다.
+            </p>
+          </div>
+
+          <!-- 4 Steps -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <div class="bg-white border border-neutral-300/90 p-5 sm:p-6 flex flex-col justify-between space-y-4 hover:border-neutral-900 transition-all hover:shadow-xs">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono font-bold tracking-widest text-neutral-900 uppercase">PHASE 01</span>
+                  <span class="text-[10px] font-mono text-neutral-500">초기 1~3개월</span>
+                </div>
+                <h3 class="text-sm sm:text-base font-bold text-neutral-950 tracking-tight leading-snug">
+                  MVP 검증: 지역 제조 1호 공장 무료 AX 잠재력 진단
+                </h3>
+                <p class="text-xs text-neutral-600 leading-relaxed">
+                  스마트공장 도입을 고민 중인 인근 산단 내 전통 제조업체 1곳을 선정, 무료 현장 진단 및 4주 퀵윈 솔루션을 도출하여 시장 수용도를 검증합니다.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-neutral-100">
+                <span class="text-[10px] font-mono uppercase text-neutral-400 block">핵심 성과 마일스톤</span>
+                <p class="text-xs font-semibold text-neutral-900 mt-0.5">첫 번째 성공 레퍼런스 및 현장 데이터 확보</p>
+              </div>
+            </div>
+
+            <div class="bg-white border border-neutral-300/90 p-5 sm:p-6 flex flex-col justify-between space-y-4 hover:border-neutral-900 transition-all hover:shadow-xs">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono font-bold tracking-widest text-neutral-900 uppercase">PHASE 02</span>
+                  <span class="text-[10px] font-mono text-neutral-500">4~8개월</span>
+                </div>
+                <h3 class="text-sm sm:text-base font-bold text-neutral-950 tracking-tight leading-snug">
+                  정부 R&D 국책과제 연계 & 산학연 컨소시엄 수주
+                </h3>
+                <p class="text-xs text-neutral-600 leading-relaxed">
+                  지방 테크노파크 및 지역 공과대학 연구실과 연계하여 1차 국책 R&D 과제를 기획·수주하고 기업 자부담을 최소화합니다.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-neutral-100">
+                <span class="text-[10px] font-mono uppercase text-neutral-400 block">핵심 성과 마일스톤</span>
+                <p class="text-xs font-semibold text-neutral-900 mt-0.5">국비 지원금 확보 및 1호 기업 실증 완료</p>
+              </div>
+            </div>
+
+            <div class="bg-white border border-neutral-300/90 p-5 sm:p-6 flex flex-col justify-between space-y-4 hover:border-neutral-900 transition-all hover:shadow-xs">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono font-bold tracking-widest text-neutral-900 uppercase">PHASE 03</span>
+                  <span class="text-[10px] font-mono text-neutral-500">9~18개월</span>
+                </div>
+                <h3 class="text-sm sm:text-base font-bold text-neutral-950 tracking-tight leading-snug">
+                  지역 거점 산단 확산: 10개 제조 라인 AX 모델 구축
+                </h3>
+                <p class="text-xs text-neutral-600 leading-relaxed">
+                  기계가공, 자동차 부품 등 지역 주력 업종별 퀵윈 템플릿을 패키지화하여 10개 회원사로 컨설팅 및 과제를 확장합니다.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-neutral-100">
+                <span class="text-[10px] font-mono uppercase text-neutral-400 block">핵심 성과 마일스톤</span>
+                <p class="text-xs font-semibold text-neutral-900 mt-0.5">업종별 맞춤형 제조 AI 표준 프레임워크 완성</p>
+              </div>
+            </div>
+
+            <div class="bg-white border border-neutral-300/90 p-5 sm:p-6 flex flex-col justify-between space-y-4 hover:border-neutral-900 transition-all hover:shadow-xs">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono font-bold tracking-widest text-neutral-900 uppercase">PHASE 04</span>
+                  <span class="text-[10px] font-mono text-neutral-500">장기 비전</span>
+                </div>
+                <h3 class="text-sm sm:text-base font-bold text-neutral-950 tracking-tight leading-snug">
+                  지역 정주형 제조 AI 혁신 허브 & 1인 전문기업 정착
+                </h3>
+                <p class="text-xs text-neutral-600 leading-relaxed">
+                  외지 컨설턴트가 아닌 지역에 상주하며 기업의 라이프사이클을 함께하는 신뢰받는 제조 AX 전략 PM 법인으로 도약합니다.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-neutral-100">
+                <span class="text-[10px] font-mono uppercase text-neutral-400 block">핵심 성과 마일스톤</span>
+                <p class="text-xs font-semibold text-neutral-900 mt-0.5">지역 제조업 AI 경쟁력의 핵심 동반자로 지속 성장</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tripartite Network -->
+          <div class="bg-[#141414] text-white p-6 sm:p-10 border border-neutral-800">
+            <div class="max-w-2xl mb-8 space-y-2">
+              <span class="text-[10px] font-mono tracking-widest uppercase text-neutral-400">TRIPARTITE COLLABORATION NETWORK</span>
+              <h3 class="text-xl sm:text-2xl font-bold tracking-tight">지역 3대 필수 협력 자원 연계도</h3>
+              <p class="text-xs sm:text-sm text-neutral-400">창직자 PM은 기업-행정-대학의 삼각 편대를 결속하여 사각지대 없는 실행력을 완성합니다.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="bg-neutral-900/90 border border-neutral-800 p-5 space-y-3">
+                <div class="flex items-center justify-between text-neutral-400 text-xs font-mono">
+                  <span>NETWORK 01</span>
+                  <span class="text-white font-semibold">현장 실증 베이스캠프</span>
+                </div>
+                <h4 class="text-base font-bold text-white tracking-tight">지역 소규모·중규모 제조업 현장</h4>
+                <p class="text-xs text-neutral-400 leading-relaxed">자동차 부품, 금속가공, 플라스틱 사출 등 현장 데이터 제공 및 퀵윈 솔루션 즉시 적용</p>
+              </div>
+
+              <div class="bg-neutral-900/90 border border-neutral-800 p-5 space-y-3">
+                <div class="flex items-center justify-between text-neutral-400 text-xs font-mono">
+                  <span>NETWORK 02</span>
+                  <span class="text-white font-semibold">정책 자금 및 R&D 지원</span>
+                </div>
+                <h4 class="text-base font-bold text-white tracking-tight">지방행정기관 및 유관 지원기관</h4>
+                <p class="text-xs text-neutral-400 leading-relaxed">지역 테크노파크(TP), 경제진흥원, 중소벤처기업진흥공단, 지자체 지역특화 혁신사업</p>
+              </div>
+
+              <div class="bg-neutral-900/90 border border-neutral-800 p-5 space-y-3">
+                <div class="flex items-center justify-between text-neutral-400 text-xs font-mono">
+                  <span>NETWORK 03</span>
+                  <span class="text-white font-semibold">첨단 AI 알고리즘 인프라</span>
+                </div>
+                <h4 class="text-base font-bold text-white tracking-tight">지역 대학 및 대학원 연구실</h4>
+                <p class="text-xs text-neutral-400 leading-relaxed">인공지능·기계공학 석박사 연구 인력 및 고성능 컴퓨팅 리소스를 현장 문제 해결에 투입</p>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-neutral-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div class="space-y-1">
+                <span class="text-[10px] font-mono text-neutral-400 uppercase">창직 비전 요약</span>
+                <p class="text-sm font-semibold text-neutral-200">"지역 제조업의 AI 경쟁력 강화의 핵심 허브가 되어 안정적인 1인 컨설팅 기업으로 정착"</p>
+              </div>
+              <button onclick="openConsultModal('산학연 네트워크 협력 문의')" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider bg-white text-neutral-950 hover:bg-neutral-200 transition-colors shrink-0">
+                지역 네트워크 협력 문의 →
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 10. Founder Profile & Core Competencies (Report Section 1 & 3.1) -->
+      <section id="founder" class="w-full bg-[#f5f4f0] py-16 sm:py-24 border-b border-neutral-300/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            
+            <!-- Left Photo -->
+            <div class="lg:col-span-5 relative">
+              <div class="relative border border-neutral-300 bg-neutral-900 overflow-hidden shadow-md">
+                <img
+                  src="/assets/images/rd_collaboration_lab_1794011318811.jpg"
+                  alt="현장과 소통하는 AX 전략 PM"
+                  class="w-full h-[440px] sm:h-[480px] object-cover filter contrast-[1.03] brightness-95"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent pointer-events-none"></div>
+
+                <div class="absolute bottom-6 left-6 right-6 text-white space-y-1">
+                  <span class="text-[10px] font-mono tracking-widest uppercase text-neutral-400">FOUNDER PROFILE</span>
+                  <h3 class="text-xl font-bold tracking-tight">창직자 (AX Strategy Specialist)</h3>
+                  <p class="text-xs text-neutral-300">지역 제조기업 AI 대전환(AX) 전략 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Bio & 3 Competencies -->
+            <div class="lg:col-span-7 space-y-6">
+              <div class="space-y-2">
+                <span class="text-[11px] font-mono tracking-widest uppercase text-neutral-500 font-semibold block">
+                  SECTION 01 & 03 · ABOUT THE STRATEGY PM
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-black text-neutral-950 tracking-tight">
+                  "기술을 자랑하는 엔지니어가 아닌,<br />
+                  공장의 내일을 함께 지키는 파트너입니다."
+                </h2>
+              </div>
+
+              <p class="text-sm sm:text-base text-neutral-700 leading-relaxed">
+                수많은 스마트공장 사업이 실패하는 이유는 AI 모델의 정확도가 부족해서가 아니라, 
+                <strong>현장 사람들의 언어로 소통하지 못했기 때문</strong>입니다.
+                기름때 묻은 작업복의 실무자와 회사의 생존을 고민하는 대표이사, 그리고 지역 대학과 행정기관을 
+                하나로 묶어내는 것이 저의 존재 이유입니다.
+              </p>
+
+              <div class="space-y-3 pt-2">
+                <div class="bg-white border border-neutral-200/90 p-4 space-y-1">
+                  <div class="flex items-center gap-2">
+                    <span class="text-xs font-mono font-bold text-neutral-900">01.</span>
+                    <h4 class="text-xs sm:text-sm font-bold text-neutral-950">제조업 생태계에 대한 깊은 이해도</h4>
+                  </div>
+                  <p class="text-xs text-neutral-600 pl-6 leading-relaxed">
+                    기계 가공, 사출, 용접, 프레스 등 전통 제조 공정의 물리적 제약과 현장 특성을 꿰뚫고 있어 불필요한 고비용 설비 교체를 강요하지 않습니다.
+                  </p>
+                </div>
+
+                <div class="bg-white border border-neutral-200/90 p-4 space-y-1">
+                  <div class="flex items-center gap-2">
+                    <span class="text-xs font-mono font-bold text-neutral-900">02.</span>
+                    <h4 class="text-xs sm:text-sm font-bold text-neutral-950">경영진-작업자 간 공감·소통 조율력</h4>
+                  </div>
+                  <p class="text-xs text-neutral-600 pl-6 leading-relaxed">
+                    대표이사의 ROI 요구와 현장 공장장의 라인 정지 우려 사이에서 기술적 언어를 알기 쉽게 통역하여 현장 반발 없는 연착륙을 만듭니다.
+                  </p>
+                </div>
+
+                <div class="bg-white border border-neutral-200/90 p-4 space-y-1">
+                  <div class="flex items-center gap-2">
+                    <span class="text-xs font-mono font-bold text-neutral-900">03.</span>
+                    <h4 class="text-xs sm:text-sm font-bold text-neutral-950">AI 자율제조 및 산학연 국책 R&D 기획 역량</h4>
+                  </div>
+                  <p class="text-xs text-neutral-600 pl-6 leading-relaxed">
+                    정부 과제 선정 평가 지표와 산학연 컨소시엄 협약 메커니즘을 숙지하여, 서류 탈락 없는 정교한 연구개발계획서를 작성합니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <button onclick="openConsultModal('PM 1:1 직통 상담')" class="px-6 py-3 bg-[#111111] text-white text-xs sm:text-sm font-semibold tracking-wider uppercase hover:bg-neutral-800 transition-colors flex items-center gap-2">
+                  <span>PM과 1:1 직통 상담 예약</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. FAQ Section -->
+      <section id="faq" class="w-full bg-[#f5f4f0] py-16 sm:py-24 border-b border-neutral-300/80">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center space-y-2 mb-12">
+            <span class="text-[11px] font-mono tracking-widest uppercase text-neutral-500 font-semibold block">
+              FREQUENTLY ASKED QUESTIONS
+            </span>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-950 tracking-tight">
+              대표님과 공장장님이 가장 자주 묻는 질문
+            </h2>
+            <p class="text-xs sm:text-sm text-neutral-600">
+              도입 비용, 기존 설비 호환성, 현장 작업자 거부감 등 현실적인 궁금증을 투명하게 안내해 드립니다.
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <div class="faq-item bg-white border border-neutral-300 transition-colors">
+              <button type="button" onclick="toggleFaq(this)" class="w-full p-4 sm:p-5 flex items-center justify-between text-left gap-4 cursor-pointer">
+                <div class="flex items-center gap-3">
+                  <span class="text-xs font-mono font-bold text-neutral-400">Q1.</span>
+                  <span class="text-xs sm:text-sm font-bold text-neutral-950">우리 공장은 낡은 기계가 대부분이고 수기로 일지를 쓰는데도 AI 도입이 가능한가요?</span>
+                </div>
+                <svg class="chevron w-4 h-4 text-neutral-500 shrink-0 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="faq-body px-5 pb-5 pt-1 text-xs sm:text-sm text-neutral-600 border-t border-neutral-100 leading-relaxed pl-11">
+                가능합니다. 많은 분들이 최신 스마트 공장이어야만 AI를 쓸 수 있다고 오해하십니다. AX 전략 PM은 수천만 원짜리 기계 교체 대신, 기존 기계에 비침습적 외장형 무선 센서나 간이 카메라를 부착해 4주 안에 데이터를 수집하고 불량을 잡아내는 퀵윈(Quick-Win) 방식을 적용합니다.
+              </div>
+            </div>
+
+            <div class="faq-item bg-white border border-neutral-300 transition-colors">
+              <button type="button" onclick="toggleFaq(this)" class="w-full p-4 sm:p-5 flex items-center justify-between text-left gap-4 cursor-pointer">
+                <div class="flex items-center gap-3">
+                  <span class="text-xs font-mono font-bold text-neutral-400">Q2.</span>
+                  <span class="text-xs sm:text-sm font-bold text-neutral-950">AI 컨설팅이나 구축 비용이 수억 원에 달할까 봐 부담스럽습니다.</span>
+                </div>
+                <svg class="chevron w-4 h-4 text-neutral-500 shrink-0 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="faq-body hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-neutral-600 border-t border-neutral-100 leading-relaxed pl-11">
+                초기 비용 부담을 없애기 위해 "무료 AX 잠재력 진단"을 먼저 진행합니다. 이후 정부/지자체의 스마트제조 지원사업 및 R&D 국책과제를 1:1 매칭하여 최대 70~90%를 정부지원금으로 충당하고, PM은 과제 수주 시 성공보수를 받는 모델(수익 모델 B)을 선택하실 수 있습니다.
+              </div>
+            </div>
+
+            <div class="faq-item bg-white border border-neutral-300 transition-colors">
+              <button type="button" onclick="toggleFaq(this)" class="w-full p-4 sm:p-5 flex items-center justify-between text-left gap-4 cursor-pointer">
+                <div class="flex items-center gap-3">
+                  <span class="text-xs font-mono font-bold text-neutral-400">Q3.</span>
+                  <span class="text-xs sm:text-sm font-bold text-neutral-950">공장장과 현장 작업자들이 번거롭다고 거부하지 않을까요?</span>
+                </div>
+                <svg class="chevron w-4 h-4 text-neutral-500 shrink-0 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="faq-body hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-neutral-600 border-t border-neutral-100 leading-relaxed pl-11">
+                가장 흔하고 중요한 문제입니다. 외지 IT 개발자가 현장에 오면 전문 용어로 작업자에게 업무 부담을 주어 실패하기 쉽습니다. 창직자는 제조업 생태계에 대한 깊은 이해와 공감 능력을 바탕으로, 현장 작업자의 손전등 검사 피로를 덜어주는 방식으로 설계하며 현장 반발을 사전에 예방합니다.
+              </div>
+            </div>
+
+            <div class="faq-item bg-white border border-neutral-300 transition-colors">
+              <button type="button" onclick="toggleFaq(this)" class="w-full p-4 sm:p-5 flex items-center justify-between text-left gap-4 cursor-pointer">
+                <div class="flex items-center gap-3">
+                  <span class="text-xs font-mono font-bold text-neutral-400">Q4.</span>
+                  <span class="text-xs sm:text-sm font-bold text-neutral-950">무료 AX 잠재력 진단은 어떻게 진행되나요?</span>
+                </div>
+                <svg class="chevron w-4 h-4 text-neutral-500 shrink-0 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="faq-body hidden px-5 pb-5 pt-1 text-xs sm:text-sm text-neutral-600 border-t border-neutral-100 leading-relaxed pl-11">
+                온라인 신청 후 사전 전화 인터뷰를 거쳐 PM이 직접 공장을 방문합니다. 2시간 내외로 현장 공정을 둘러보고, 대표님과 공장장의 고민을 청취한 뒤 3영업일 이내에 [1페이지 퀵윈 진단 보고서] 및 [매칭 가능한 정부 지원사업 리스트]를 무료로 제공해 드립니다.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- 12. Footer -->
+    <footer class="w-full bg-[#111111] text-white pt-16 pb-12 border-t border-neutral-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+          <div class="md:col-span-5 space-y-4">
+            <div class="space-y-1">
+              <span class="text-2xl font-black tracking-tight text-white font-sans block">AX PM</span>
+              <span class="text-[10px] font-mono tracking-widest text-neutral-400 uppercase block">REGIONAL MANUFACTURING AI TRANSFORMATION</span>
+            </div>
+            <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed max-w-sm">
+              전통 제조업의 기술 장벽을 허물고, AI 솔루션 도입과 정부 R&D 연계로 지역 공장의 확실한 성장을 이끄는 지역 정주형 AI 전환 파트너.
+            </p>
+            <div class="pt-2 text-xs text-neutral-400 space-y-1 font-mono">
+              <p>· 신직업명: 지역 제조기업 AI 대전환(AX) 전략 PM</p>
+              <p>· 창직자: 창직자님 (AX Strategy Specialist)</p>
+              <p>· 비전: 지역 제조업의 AI 경쟁력 강화 핵심 허브 1인 컨설팅 기업</p>
+            </div>
+          </div>
+
+          <div class="md:col-span-3 space-y-3">
+            <h4 class="text-xs font-bold uppercase tracking-widest text-neutral-200">Navigation</h4>
+            <ul class="space-y-2 text-xs text-neutral-400">
+              <li><a href="#solutions" class="hover:text-white transition-colors">핵심 솔루션 (머신비전/PdM/에너지)</a></li>
+              <li><a href="#pain-points" class="hover:text-white transition-colors">현장 문제 및 타겟 (Pain Point)</a></li>
+              <li><a href="#revenue" class="hover:text-white transition-colors">수익 모델 (용역형 A / 성공보수형 B)</a></li>
+              <li><a href="#diagnostic" class="hover:text-white transition-colors">무료 4주 퀵윈 셀프 진단기</a></li>
+              <li><a href="#roadmap" class="hover:text-white transition-colors">지역 정주 로드맵 & 산학연 네트워크</a></li>
+              <li><a href="#faq" class="hover:text-white transition-colors">자주 묻는 질문 (FAQ)</a></li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-4 space-y-3">
+            <h4 class="text-xs font-bold uppercase tracking-widest text-neutral-200">Regional Operations</h4>
+            <div class="space-y-2 text-xs text-neutral-400">
+              <p class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-neutral-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <span>지역 국가산업단지 혁신지원센터 / 산학협력관 상주</span>
+              </p>
+              <p class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-neutral-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                <span>현장 직통 문의: 0507-1300-2026 (평일 08:30 ~ 18:30)</span>
+              </p>
+              <p class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-neutral-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <span>이메일: contact@axpm-regional.kr</span>
+              </p>
+            </div>
+            <div class="pt-3">
+              <div class="p-3 bg-neutral-900 border border-neutral-800 text-[11px] text-neutral-400">
+                <span class="text-neutral-200 font-semibold block mb-0.5">상시 접수 안내</span>
+                인근 산업단지 내 전통 제조 중소기업 1:1 방문 무료진단은 월 4개 사 한정으로 운영됩니다.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
+          <p>© 2026 지역 제조기업 AI 대전환(AX) 전략 PM. All rights reserved.</p>
+          <div class="flex items-center gap-6">
+            <span>개인정보처리방침</span>
+            <span>서비스이용약관</span>
+            <button onclick="window.scrollTo({top:0, behavior:'smooth'})" class="flex items-center gap-1 text-neutral-400 hover:text-white transition-colors font-mono text-[11px]">
+              <span>TOP</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 13. Solution Detail Modal -->
+    <div id="solutionDetailModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-neutral-950/70 backdrop-blur-xs">
+      <div class="relative w-full max-w-2xl bg-white border border-neutral-300 shadow-2xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
+        <button onclick="closeSolutionModal()" class="absolute top-4 right-4 p-2 text-neutral-500 hover:text-neutral-950">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <div class="space-y-5">
+          <div class="flex items-center gap-2 text-xs font-mono text-neutral-500 uppercase">
+            <span id="modalCat">품질 검사 / 비전</span>
+            <span>·</span>
+            <span>4-WEEK QUICK-WIN</span>
+          </div>
+          <h3 id="modalTitle" class="text-xl sm:text-2xl font-black text-neutral-950 tracking-tight">인공지능 머신비전 자동 불량 판정 솔루션</h3>
+          <div class="aspect-[16/9] w-full overflow-hidden bg-neutral-100 border border-neutral-200">
+            <img id="modalImg" src="/assets/images/smart_vision_factory_1794011317729.jpg" alt="솔루션" class="w-full h-full object-cover" />
+          </div>
+          <p id="modalDesc" class="text-sm text-neutral-700 leading-relaxed">육안 검사에 의존하던 조립 및 가공 공정에 AI 엣지 비전 시스템을 결합하여 검사 인력난을 해소하고 불량 유출을 제로화합니다.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 bg-[#f8f7f4] border border-neutral-200 text-xs">
+            <div>
+              <span class="text-[10px] uppercase font-mono text-neutral-500 block">핵심 성과 (KPI)</span>
+              <p id="modalKpi" class="font-bold text-neutral-950 mt-0.5">불량 검출 정확도 99.4% / 검사 속도 3.2배</p>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase font-mono text-neutral-500 block">투자 회수 기간</span>
+              <p id="modalRoi" class="font-bold text-neutral-950 mt-0.5">평균 3.8개월 내 투자 회수</p>
+            </div>
+            <div class="sm:col-span-2 pt-2 border-t border-neutral-200">
+              <span class="text-[10px] uppercase font-mono text-neutral-500 block">연계 정부 지원사업</span>
+              <p id="modalGov" class="font-semibold text-neutral-900 mt-0.5">스마트공장 구축 및 고도화 지원사업 (최대 2억원 국비 지원)</p>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-neutral-200 flex flex-col sm:flex-row items-center justify-end gap-3">
+            <button onclick="closeSolutionModal()" class="w-full sm:w-auto px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-neutral-700 hover:text-neutral-950 border border-neutral-300">
+              닫기
+            </button>
+            <button onclick="bookCurrentSolutionModal()" class="w-full sm:w-auto px-6 py-2.5 text-xs font-semibold uppercase tracking-wider bg-[#111111] text-white hover:bg-neutral-800 flex items-center justify-center gap-1.5">
+              <span>이 솔루션으로 현장 진단 신청</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14. 1:1 Consultation Reservation Modal -->
+    <div id="consultModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-neutral-950/70 backdrop-blur-xs">
+      <div class="relative w-full max-w-xl bg-white border border-neutral-300 shadow-2xl p-6 sm:p-8 max-h-[92vh] overflow-y-auto">
+        <button onclick="closeConsultModal()" class="absolute top-4 right-4 p-2 text-neutral-400 hover:text-neutral-900">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+
+        <form onsubmit="submitConsultReservation(event)" class="space-y-5">
+          <div class="space-y-1">
+            <span class="text-[10px] font-mono tracking-widest uppercase text-neutral-400 font-bold block">
+              ON-SITE CONSULTING RESERVATION
+            </span>
+            <h3 class="text-xl sm:text-2xl font-black text-neutral-950 tracking-tight">
+              무료 1:1 현장방문 컨설팅 신청
+            </h3>
+            <p class="text-xs text-neutral-600">
+              공장장 및 실무진과의 2시간 현장 실사를 통해 가장 빠른 퀵윈(Quick-Win) 솔루션을 도출해 드립니다.
+            </p>
+          </div>
+
+          <div class="space-y-3.5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="space-y-1">
+                <label class="text-xs font-bold text-neutral-900 block">기업명 <span class="text-red-500">*</span></label>
+                <input type="text" id="consultCompany" required placeholder="(주)대한정밀공업" class="w-full px-3 py-2 text-xs border border-neutral-300 focus:outline-none focus:border-neutral-950" />
+              </div>
+              <div class="space-y-1">
+                <label class="text-xs font-bold text-neutral-900 block">신청자 성함 / 직함 <span class="text-red-500">*</span></label>
+                <input type="text" id="consultName" required placeholder="홍길동 대표이사 / 공장장" class="w-full px-3 py-2 text-xs border border-neutral-300 focus:outline-none focus:border-neutral-950" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="space-y-1">
+                <label class="text-xs font-bold text-neutral-900 block">휴대전화 번호 <span class="text-red-500">*</span></label>
+                <input type="tel" id="consultPhone" required placeholder="010-1234-5678" class="w-full px-3 py-2 text-xs border border-neutral-300 focus:outline-none focus:border-neutral-950" />
+              </div>
+              <div class="space-y-1">
+                <label class="text-xs font-bold text-neutral-900 block">이메일 주소</label>
+                <input type="email" id="consultEmail" placeholder="ceo@factory.co.kr" class="w-full px-3 py-2 text-xs border border-neutral-300 focus:outline-none focus:border-neutral-950" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="space-y-1">
+                <label class="text-xs font-bold text-neutral-900 block">공장 소재지 (산업단지명)</label>
+                <input type="text" id="consultLoc" placeholder="창원국가산단 / 시화산단 등" class="w-full px-3 py-2 text-xs border border-neutral-300 focus:outline-none focus:border-neutral-950" />
+              </div>
+              <div class="space-y-1">
+                <label class="text-xs font-bold text-neutral-900 block">주요 공정 분야</label>
+                <select id="consultProcess" class="w-full px-3 py-2 text-xs border border-neutral-300 focus:outline-none focus:border-neutral-950 bg-white">
+                  <option value="금속가공">금속·기계 가공 / CNC</option>
+                  <option value="자동차부품">자동차 부품 조립</option>
+                  <option value="사출성형">플라스틱 사출·성형</option>
+                  <option value="프레스용접">프레스 / 판금 / 용접</option>
+                  <option value="전기전자">전기·전자 SMT / 조립</option>
+                  <option value="화학소재">화학 / 코팅 / 소재</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="space-y-1">
+              <label class="text-xs font-bold text-neutral-900 block">현재 현장 고민 또는 관심 주제</label>
+              <textarea id="consultTopic" rows="3" placeholder="예: 가공 설비 진동으로 인한 불량 발생, 검사원 구인난, 국책 R&D 제안서 작성 지원 희망 등" class="w-full px-3 py-2 text-xs border border-neutral-300 focus:outline-none focus:border-neutral-950"></textarea>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-neutral-200 flex items-center justify-between gap-3">
+            <span class="text-[11px] text-neutral-500">개인정보는 방문 진단 목적으로만 안전하게 활용됩니다.</span>
+            <button type="submit" class="px-6 py-3 bg-[#111111] text-white text-xs font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors flex items-center gap-1.5 shrink-0">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+              <span>무료 진단 예약 제출</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- 15. All Interactive Client-side Script -->
+    <script>
+      // Solutions Database
+      const solutionData = [
+        {
+          cat: "품질 검사 / 비전",
+          title: "인공지능 머신비전 자동 불량 판정 솔루션",
+          img: "/assets/images/smart_vision_factory_1794011317729.jpg",
+          desc: "육안 검사에 의존하던 조립 및 가공 공정에 AI 엣지 비전 시스템을 결합하여 검사 인력난을 해소하고 불량 유출을 제로화합니다.",
+          kpi: "불량 검출 정확도 99.4% / 검사 속도 3.2배 향상",
+          roi: "평균 3.8개월 내 투자 회수",
+          gov: "스마트공장 구축 및 고도화 지원사업 (최대 2억원 국비 지원)"
+        },
+        {
+          cat: "설비 예지보전",
+          title: "무선 센서 기반 설비 이상 예지보전(PdM)",
+          img: "/assets/images/pdm_sensor_machinery_1794011318786.jpg",
+          desc: "핵심 회전체 설비에 무선 다축 센서를 부착하여 이상 징후를 72시간 전 사전 예측, 라인 다운타임 비용을 획기적으로 줄입니다.",
+          kpi: "설비 비가동 시간(Downtime) 45% 감소",
+          roi: "설비 1회 불시 정지 방지만으로 시스템 회수",
+          gov: "제조 AI 융합 솔루션 보급사업 (최대 1.5억원 매칭 지원)"
+        },
+        {
+          cat: "정부 R&D 기획",
+          title: "2026 제조 AI 자율제조 국책과제 기획 & 수주 패키지",
+          img: "/assets/images/rd_collaboration_lab_1794011318811.jpg",
+          desc: "기술력은 있으나 연구계획서 작성 및 규정 준수가 막막한 지역 제조기업을 위해 과제 기획, 대학원 연계, 발표 평가를 전담 지원합니다.",
+          kpi: "국책과제 선정률 85% 이상 / 5억~15억원 R&D 예산 확보",
+          roi: "착수금 부담 최소화 + 최종 선정 시 성공보수 구조",
+          gov: "산학연 Collabo R&D, 지역혁신선도기업 육성, AI 자율제조 100선"
+        },
+        {
+          cat: "공정·에너지 최적화",
+          title: "열처리·사출 공정 AI 피크 전력 및 에너지 절감 제어",
+          img: "/assets/images/hero_ax_pm_factory_1794011318221.jpg",
+          desc: "산업용 전기요금 인상에 대응하여 전력 다소비 설비의 가동 스케줄을 예측 제어하고 에너지 낭비를 최대 20% 줄입니다.",
+          kpi: "공장 전체 전력요금 18.2% 절감 / 탄소배출 감축",
+          roi: "연간 전기요금 절감액으로 5개월 내 회수",
+          gov: "탄소중립형 스마트공장 구축 지원 (최대 70% 정부지원)"
+        }
+      ];
+
+      // Bottleneck database for simulator
+      const bottleneckPresets = [
+        {
+          title: "인공지능 머신비전 엣지 불량 자동 판정",
+          desc: "초기 대규모 설비 교체 없이 4주 내 실증 가능한 공정 맞춤형 솔루션입니다. 기존 라인에 소형 광학 킷을 비침습적으로 결합합니다.",
+          grant: "중기부 스마트제조혁신 지원사업 (최대 2억원 국비 지원)"
+        },
+        {
+          title: "무선 진동·온도 IoT 센서 기반 설비 이상 예지보전(PdM)",
+          desc: "공정 라인 중단 없이 마그네틱 무선 센서를 부착하여 4주 만에 설비 진동 베이스라인을 수립하고 돌발 고장을 사전 예방합니다.",
+          grant: "제조 AI 융합 솔루션 보급사업 (최대 1.5억원 국비 매칭)"
+        },
+        {
+          title: "피크 전력 최적화 및 열처리/압력 공정 AI 제어",
+          desc: "스마트 전력 미터링과 공정 파라미터 연계를 통해 전기요금 피크 부하를 분산시키고 제품 편차를 방지합니다.",
+          grant: "탄소중립형 스마트공장 구축 지원 (최대 70% 정부지원)"
+        },
+        {
+          title: "2026 제조 AI 국책과제 기획 & 산학연 컨소시엄 구성",
+          desc: "기업 보유 기술을 바탕으로 정부 지원사업 RFP에 최적화된 사업계획서를 기획하고 지역 대학원 연구실을 컨소시엄에 매칭합니다.",
+          grant: "산학연 Collabo R&D / 산업부 제조 AI 자율제조 R&D"
+        }
+      ];
+
+      let currentSelectedBottleneckIdx = 0;
+      let currentModalSolutionIdx = 0;
+
+      // Toast notification helper
+      function showToast(msg) {
+        const toast = document.getElementById('toastNotification');
+        const text = document.getElementById('toastMessage');
+        text.innerText = msg;
+        toast.classList.remove('hidden');
+        setTimeout(() => {
+          hideToast();
+        }, 5000);
+      }
+
+      function hideToast() {
+        document.getElementById('toastNotification').classList.add('hidden');
+      }
+
+      // Mobile Menu
+      function toggleMobileMenu() {
+        const drawer = document.getElementById('mobileDrawer');
+        drawer.classList.toggle('hidden');
+      }
+
+      // Solutions filter
+      function filterSolutions(cat, btn) {
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          b.classList.remove('bg-[#111111]', 'text-white', 'shadow-xs');
+          b.classList.add('text-neutral-700');
+        });
+        btn.classList.add('bg-[#111111]', 'text-white', 'shadow-xs');
+        btn.classList.remove('text-neutral-700');
+
+        const cards = document.querySelectorAll('.solution-card');
+        cards.forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      }
+
+      // Bookmark Toggle
+      function toggleBookmark(id, btn) {
+        const icon = btn.querySelector('.bookmark-icon');
+        const isFilled = icon.getAttribute('fill') === 'currentColor';
+        if (isFilled) {
+          icon.setAttribute('fill', 'none');
+          showToast('관심 솔루션 저장을 취소했습니다.');
+        } else {
+          icon.setAttribute('fill', 'currentColor');
+          showToast('관심 솔루션에 저장되었습니다.');
+        }
+      }
+
+      // Solution Detail Modal
+      function openSolutionModal(idx) {
+        currentModalSolutionIdx = idx;
+        const data = solutionData[idx];
+        document.getElementById('modalCat').innerText = data.cat;
+        document.getElementById('modalTitle').innerText = data.title;
+        document.getElementById('modalImg').src = data.img;
+        document.getElementById('modalDesc').innerText = data.desc;
+        document.getElementById('modalKpi').innerText = data.kpi;
+        document.getElementById('modalRoi').innerText = data.roi;
+        document.getElementById('modalGov').innerText = data.gov;
+        document.getElementById('solutionDetailModal').classList.remove('hidden');
+      }
+
+      function closeSolutionModal() {
+        document.getElementById('solutionDetailModal').classList.add('hidden');
+      }
+
+      function bookCurrentSolutionModal() {
+        const title = solutionData[currentModalSolutionIdx].title;
+        closeSolutionModal();
+        openConsultModal(title);
+      }
+
+      // Simulator Functions
+      function selectIndustry(name, btn) {
+        document.querySelectorAll('.ind-btn').forEach(b => {
+          b.classList.remove('border-neutral-950', 'bg-neutral-950', 'text-white');
+          b.classList.add('border-neutral-200', 'bg-neutral-50/50', 'text-neutral-700');
+        });
+        btn.classList.add('border-neutral-950', 'bg-neutral-950', 'text-white');
+        btn.classList.remove('border-neutral-200', 'bg-neutral-50/50', 'text-neutral-700');
+      }
+
+      function selectStatus(name, card) {
+        document.querySelectorAll('.stat-card').forEach(c => {
+          c.classList.remove('border-neutral-950', 'bg-neutral-950', 'text-white');
+          c.classList.add('border-neutral-200', 'bg-neutral-50/50', 'text-neutral-800');
+        });
+        card.classList.add('border-neutral-950', 'bg-neutral-950', 'text-white');
+        card.classList.remove('border-neutral-200', 'bg-neutral-50/50', 'text-neutral-800');
+      }
+
+      function selectBottleneck(idx, label) {
+        currentSelectedBottleneckIdx = idx;
+        document.querySelectorAll('.bn-option').forEach((opt) => {
+          opt.classList.remove('border-neutral-950', 'bg-neutral-100', 'font-semibold', 'text-neutral-950');
+          opt.classList.add('border-neutral-200', 'text-neutral-700');
+          const dot = opt.querySelector('.dot');
+          dot.innerHTML = '';
+          dot.classList.remove('border-neutral-950', 'bg-neutral-950');
+          dot.classList.add('border-neutral-400');
+        });
+
+        label.classList.add('border-neutral-950', 'bg-neutral-100', 'font-semibold', 'text-neutral-950');
+        label.classList.remove('border-neutral-200', 'text-neutral-700');
+        const dot = label.querySelector('.dot');
+        dot.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-white"></span>';
+        dot.classList.add('border-neutral-950', 'bg-neutral-950');
+        dot.classList.remove('border-neutral-400');
+
+        calculateDiagnostic();
+      }
+
+      function calculateDiagnostic() {
+        const item = bottleneckPresets[currentSelectedBottleneckIdx];
+        document.getElementById('resSolutionTitle').innerText = item.title;
+        document.getElementById('resSolutionDesc').innerText = item.desc;
+        document.getElementById('resGrant').innerText = item.grant;
+        showToast('맞춤 퀵윈 진단 결과가 갱신되었습니다.');
+      }
+
+      function submitDiagnosticLead(e) {
+        e.preventDefault();
+        const company = document.getElementById('diagCompany').value;
+        const name = document.getElementById('diagName').value;
+        const phone = document.getElementById('diagPhone').value;
+        if (!company || !name || !phone) return;
+
+        showToast(`[${company}] 무료 1:1 현장방문 진단 신청이 접수되었습니다! 24시간 내 연락드립니다.`);
+        e.target.reset();
+      }
+
+      // Consultation Modal Functions
+      function openConsultModal(topic = '') {
+        if (topic) {
+          document.getElementById('consultTopic').value = topic;
+        }
+        document.getElementById('consultModal').classList.remove('hidden');
+      }
+
+      function closeConsultModal() {
+        document.getElementById('consultModal').classList.add('hidden');
+      }
+
+      function submitConsultReservation(e) {
+        e.preventDefault();
+        const company = document.getElementById('consultCompany').value;
+        const name = document.getElementById('consultName').value;
+        const phone = document.getElementById('consultPhone').value;
+        if (!company || !name || !phone) return;
+
+        closeConsultModal();
+        showToast(`[${company}] ${name} 님의 현장방문 예약이 완료되었습니다. 담당 PM이 확인 후 연락드립니다.`);
+        e.target.reset();
+      }
+
+      // FAQ Accordion
+      function toggleFaq(btn) {
+        const body = btn.nextElementSibling;
+        const chevron = btn.querySelector('.chevron');
+        const isHidden = body.classList.contains('hidden');
+        
+        document.querySelectorAll('.faq-body').forEach(b => b.classList.add('hidden'));
+        document.querySelectorAll('.chevron').forEach(c => c.classList.remove('rotate-180'));
+
+        if (isHidden) {
+          body.classList.remove('hidden');
+          chevron.classList.add('rotate-180');
+        }
+      }
+    </script>
+  </body>
+</html>
